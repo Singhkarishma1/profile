@@ -2,7 +2,13 @@ import React, { useState } from 'react';
 import Profile from './profile';
 import Notification from './notification';
 import Details from './details';
-import Update from './update';
+
+import History from './history';
+import Search_blood from './search_blood';
+
+
+
+import { Notifications } from '@mui/icons-material';
 function App() {
   const [activePanel, setActivePanel] = useState('profile');
   return (
@@ -41,31 +47,32 @@ function App() {
                 </a>
             </li>
             <li className="mb-4">
-              <a href="#Details">
+              <a href="#Search_blood">
             <button
-                onClick={() => setActivePanel('details')}
+                onClick={() => setActivePanel('search_blood')}
                 className="flex items-center p-2 text-black hover:bg-red-700 rounded w-full"
               >
                 <svg className="w-6 h-6 mr-2" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M9 16h6m-7 4h8a2 2 0 002-2v-2.5a4.5 4.5 0 00-9 0V18a2 2 0 002 2zm1.341-4.5h4.318A2 2 0 0014 11.5V10a4.5 4.5 0 10-9 0v1.5a2 2 0 002 2z"></path>
                 </svg>
-                Details
+                Search Blood
               </button>
               </a>
             </li>
-            <li className="mb-4 ">
-              <a href="#Updates">
+            <li className="mb-4">
+            <a href="#History">
             <button
-                onClick={() => setActivePanel('updates')}
+                onClick={() => setActivePanel('history')}
                 className="flex items-center p-2 text-black hover:bg-red-700 rounded w-full"
-              >
-                <svg className="w-6 h-6 mr-2" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M15.232 5.232l4.536 4.536m0 0l-4.536 4.536M19.768 9.768H5a2 2 0 00-2 2v6a2 2 0 002 2h14a2 2 0 002-2v-6a2 2 0 00-2-2z"></path>
+              > 
+              <svg className="w-6 h-6 mr-2" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M5.121 17.804A3 3 0 013 15V7a3 3 0 013-3h12a3 3 0 013 3v8a3 3 0 01-2.121 2.804M7 17a4 4 0 108 0M8 11h.01M16 11h.01"></path>
                 </svg>
-                Update
-              </button>
-              </a>
+                History
+               </button>
+               </a>
             </li>
+            
           </ul>
         </div>
 
@@ -73,9 +80,10 @@ function App() {
         <div className="flex-1 p-6 bg-gray-100 h-auto">
           {/* Render content conditionally based on the active panel */}
           {activePanel === 'profile' && <Profile />}
-          {activePanel === 'history' && <Notification />}
-          {activePanel === 'notifications' && <Details />}
-          {activePanel === 'search blood' && <Update />}
+          {activePanel === 'history' && <History />}
+          {activePanel === 'notifications' && <Notifications />}
+          {activePanel === 'search_blood' && <Search_blood />}
+         
         </div>
       </div>
     </div>
