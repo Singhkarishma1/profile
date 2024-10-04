@@ -13,7 +13,7 @@ function App() {
   const [activePanel, setActivePanel] = useState('profile');
   return (
     <div className="flex flex-col h-screen">
-     
+     //new change
       <div className="flex flex-1 px-2 h-1">
         {/* Sidebar */}
         <div className="w-640 text-black p-6">
