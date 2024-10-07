@@ -1,6 +1,6 @@
 import React from 'react';
 
-function NotificationPanel() {
+function Notification() {
     const notifications = [
         {
           time: '8:00 AM',
@@ -51,4 +51,4 @@ function NotificationPanel() {
   );
 }
 
-export default NotificationPanel;
+export default Notification;

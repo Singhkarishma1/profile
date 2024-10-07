@@ -13,7 +13,7 @@ function App() {
   const [activePanel, setActivePanel] = useState('profile');
   return (
     <div className="flex flex-col h-screen">
-     //new change
+  
       <div className="flex flex-1 px-2 h-1">
         {/* Sidebar */}
         <div className="w-640 text-black p-6">
@@ -33,9 +33,9 @@ function App() {
                </a>
             </li>
             <li className="mb-4">
-              <a href="#notification">
+              <a href="#Notification">
             <button
-                onClick={() => setActivePanel('notifications')}
+                onClick={() => setActivePanel('notification')}
                 className="flex items-center p-2 text-black hover:bg-red-700 rounded w-full"
               >
                 <svg className="w-6 h-6 mr-2" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -81,7 +81,7 @@ function App() {
           {/* Render content conditionally based on the active panel */}
           {activePanel === 'profile' && <Profile />}
           {activePanel === 'history' && <History />}
-          {activePanel === 'notifications' && <Notifications />}
+          {activePanel === 'notification' && <Notification />}
           {activePanel === 'search_blood' && <Search_blood />}
          
         </div>

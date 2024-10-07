@@ -12,8 +12,7 @@ function App() {
     <>
       <Navbar/>
      <Sidenav/> 
-     <NotificationPanel /> 
-     <DonationHistory />
+    
      
     </>
   )
